@@ -2,7 +2,7 @@
 
 
 ## Introduction
-Multiplying large numbers is limited by the size of the values ​​represented in different programming languages, so if the maximum size is exceeded, other techniques must be used. This implementation proposes an algorithm that multiplies integers beyond the size of Java's integer types, using a *Divide and Conquer* programming approach.
+Multiplying big numbers is limited by the size of the values ​​represented in different programming languages, so if the maximum size is exceeded, other techniques must be used. This implementation proposes an algorithm that multiplies integers beyond the size of Java's integer types, using a *Divide and Conquer* programming approach.
 
 ## Instructions
 To use the program, copy the *Multiply.jar* file to a folder of your choice. Then, open the operating system's terminal, navigate to the folder where the .jar file was copied, and run the program using the following syntax:
