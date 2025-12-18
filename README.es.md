@@ -32,11 +32,11 @@ Opciones posibles:
 ## Imágenes de muestra
 A continuación, se pueden ver unas imágenes de muestra del programa.
 
-* Ejemplo de salida de la solución por la terminal del sistema operativo.
+* Ejemplo de salida de una solución por la terminal del sistema operativo.
 
   ![out_example](Images/result_cmd.png)
 
-* Ejemplo de salida de la solución en un archivo de salida.
+* Ejemplo de salida de una solución en un archivo de salida.
 
 ![output_file_example](Images/output_example.png)
 
