@@ -28,11 +28,11 @@ Opciones posibles:
 ## Demo
 Below are some sample images of the program.
 
-* Example of solution output via the operating system terminal.
+* Example of a solution output via the operating system terminal.
 
 ![terminal_output](Images/result_cmd.png)
 
-* Example of solution output in an output file.
+* Example of a solution output in an output file.
 
 ![output_file_example](Images/output_example.png)
 
