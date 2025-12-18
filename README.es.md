@@ -6,7 +6,7 @@ La multiplicación de grandes números está limitada por el tamaño de represen
 ## Instrucciones
 Para usar el programa, se copia el archivo *Multiply.jar* en una carpeta a elección del usuario. A continuación, se abre el terminal del sistema operativo, se navega hasta la ubicación de la carpeta donde se copió el archivo con extensión .jar y se ejecuta el archivo mediante la siguiente sintáxis:
 
-* `multiply.jar [-t] [-h] [fichero_entrada] [fichero_salida]`
+* `java -jar multiply.jar [-t] [-h] [fichero_entrada] [fichero_salida]`
 
 
 Los argumentos son los siguientes:
