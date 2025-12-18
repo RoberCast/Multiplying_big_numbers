@@ -20,7 +20,7 @@ Opciones posibles:
 * `java -jar multiply.jar -t input_file output_file`
 * `java -jar multiply.jar input_file output_file`
 
-* Considerations*:
+*Considerations*:
 * The input file consists of two values ​​separated by one or more spaces or line breaks. Additionally, the values ​​may contain a "+" or "-" sign. Two consecutive signs or spaces are not allowed before the first given value.
 * Input and output files must have the .txt extension; otherwise, the application will generate an error.
 * The limit for numbers that can be multiplied is two numbers of 2000 digits each. If either of them has more digits, the application will generate an error.
