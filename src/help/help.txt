@@ -1,0 +1,56 @@
+
+
+/**********************************************************************************************************
+*
+*                                   HELP FOR MULTIPLYING BIG NUMBERS
+*                                            Version: 1.0.
+*
+**********************************************************************************************************/
+
+CORRECT SYNTAX
+==============
+
+    multiply [-t] [-h] [input_file] [output_file]
+
+
+    Accepted options:
+        multiply -h                              Display this help.
+        multiply input_file                      Print the output.
+        multiply -t input_file                   Generate the file with the trace and print the output.
+        multiply -t input_file output_file    	 Generate trace and output files.
+        multiply input_file output_file      	 Generate the output file.
+	
+
+PARAMETERS
+==========
+
+    -t               Trace the multiplication of big numbers.
+    -h               Display this help.
+    input_file       Input file name.
+    output_file      Output file name.
+	
+	
+SAMPLE INPUT FILE FORMAT
+========================
+
+    47284745776746161618393034957864535242627373737373767985878659875694854586578486548968
+
+    987866548122322484862248976218498498798498465487491984685189987892183
+    
+    That is, two values separated by one or more spaces or line breaks. Furthermore, the values can have a
+    '+' or '-' sign. Two consecutive signs or spaces before the first given value are not allowed.
+
+
+CHARACTERISTICS OF INPUT AND OUTPUT FILES
+=========================================
+    
+    Input and output files must have the .txt extension, otherwise the application will generate an error.
+    
+    The limit of numbers to be multiplied is two numbers with 2000 digits each. If either of them has more 
+    digits, the application will generate an error.
+	
+	
+AUTHOR
+======
+
+    Roberto Castillejo Embid.
