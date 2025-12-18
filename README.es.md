@@ -8,9 +8,11 @@ Para usar el programa, se copia el archivo *Multiply.jar* en una carpeta a elecc
 
 * `multiply.jar [-t] [-h] [fichero_entrada] [fichero_salida]`
 
+
 Los argumentos son los siguientes:
 * `-t`: Traza cada paso de manera que se describa la descomposición en sub-números.
 * `-h`: Muestra la ayuda y sintaxis del comando de ejecución.
+
 
 Opciones posibles:
 * `java -jar multiply.jar -h`
@@ -18,6 +20,7 @@ Opciones posibles:
 * `java -jar multiply.jar -t fichero_entrada`
 * `java -jar multiply.jar -t fichero_entrada fichero_salida`
 * `java -jar multiply.jar fichero_entrada fichero_salida`
+
 
 *Consideraciones*:
 * El fichero de entrada consiste en dos valores separados por uno o más espacios o por saltos de línea. Además, los valores pueden tener un signo "+" o "-". No se permiten dos signos o espacios consecutivos antes del primer valor dado.
