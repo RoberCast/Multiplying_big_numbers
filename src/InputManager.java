@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -223,11 +222,14 @@ public class InputManager
 		
 		if(!f.exists() && !isHelp) {  //Error if input file does not exist
 			String fileNotExist = "Error: The file " + file + " does not exist.";
-			System.out.println(fileNotExist);
-			//Write the event to the log.
-			log.writeToLog(fileNotExist);
-			printHelp(false);
-			System.exit(-1);
+			handleError(fileNotExist);
+		}
+		
+		if(f.exists()) {  //Checks if the file has a .txt extension
+			if(!file.contains(".txt")) {
+				String fileNotTxt = "Error: The file " + file + " does not have a .txt extension.";
+				handleError(fileNotTxt);
+			}
 		}
 		
 		try{
@@ -276,25 +278,14 @@ public class InputManager
 					//number of digits.
 					if(values[0].getValue().length() > 2000){ 
 						String limitError = "Error: The digit limit for numbers has been exceeded.";
-						System.out.println(limitError);
-						printHelp(false);
-						//Write the event to the log.
-						log.writeToLog(limitError);
-						System.exit(-1);
+						handleError(limitError);
 					}
 				}
 			}	
 		}
-		catch(FileNotFoundException e){
-			handleInputException(isHelp);
-		}
 		catch(IOException e){
 			String fileError = "Error: There was a problem reading the file.";
-			System.out.println(fileError);
-			printHelp(false);
-			//Writes the event to the log.
-			log.writeToLog(fileError);
-			System.exit(-1);
+			handleError(fileError);
 		}
 		finally{
 			//Closes the file.
@@ -304,11 +295,7 @@ public class InputManager
 				}
 			}catch(IOException e){
 				String closeError = "Error: There was a problem closing the file.";
-				System.out.println(closeError);
-				printHelp(false);
-				//Writes the event to the log.
-				log.writeToLog(closeError);
-				System.exit(-1);
+				handleError(closeError);
 			}
 		}
 	}
@@ -329,11 +316,7 @@ public class InputManager
 				}
 				else{
 					String excessValuesError = "Error: There can only be 2 values in the input file.";
-					System.out.println(excessValuesError);
-					printHelp(false);
-					//Writes the event to the log.
-					log.writeToLog(excessValuesError);
-					System.exit(-1);
+					handleError(excessValuesError);
 				}
 			}
 		}
@@ -371,11 +354,7 @@ public class InputManager
 		}
 		catch(NumberFormatException e){
 			String characterError = "Error: Decimals and special characters are not allowed in the input file.";
-			System.out.println(characterError);
-			printHelp(false);
-			//Writes the event to the log.
-			log.writeToLog(characterError);
-			System.exit(-1);
+			handleError(characterError);
 		}
 		values[numberOfValues] = new BigNumber(sign, digit);
 		numberOfValues++;
@@ -402,43 +381,21 @@ public class InputManager
 		}
 		catch(Exception e){
 			String fileError = "Error: Invalid input file.";
-			System.out.println(fileError);
-			//Writes the event to the log.
-			log.writeToLog(fileError);
-			printHelp(false);
-			System.exit(-1);
+			handleError(fileError);
 		}
 	}
 	
 	/**
-	 * Handles the exception of reading the input file.
+	 * Take the necessary actions to inform the user of an error.
 	 * 
-	 * @param isHelp	True if the file is a help file, false otherwise.
+	 * @param errorName		A String of information about an error.
 	 */
-	private void handleInputException(boolean isHelp)
+	private void handleError(String errorName)
 	{
-		if(isHelp){
-			String helpNotFound = "Error: Help file not found.";
-			System.out.println(helpNotFound);
-			//Writes the event to the log.
-			log.writeToLog(helpNotFound);
-		}
-		else{
-			if(inputFile.contains("txt")){
-				String inputNotFound = "Error: Input file not found.";
-				System.out.println(inputNotFound);
-				printHelp(false);
-				//Writes the event to the log.
-				log.writeToLog(inputNotFound);
-			}
-			else{
-				String notTxt = "Error: The input file does not have a .txt extension";
-				System.out.println(notTxt);
-				printHelp(false);
-				//Writes the event to the log.
-				log.writeToLog(notTxt);
-			}
-		}
+		System.out.println(errorName);
+		//Write the event to the log.
+		log.writeToLog(errorName);
+		printHelp(false);
 		System.exit(-1);
 	}
 }
