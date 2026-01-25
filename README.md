@@ -26,7 +26,7 @@ Opciones posibles:
 * The limit for numbers that can be multiplied is two numbers of 2000 digits each. If either of them has more digits, the application will generate an error.
 
 ## Demo
-Below are some sample images of the program.
+Below are some sample images of the program. It was tested on Windows 11 Pro (x64) version 25H2.
 
 * Example of a solution output via the operating system terminal.
 
