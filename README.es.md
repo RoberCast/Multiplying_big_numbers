@@ -30,7 +30,7 @@ Opciones posibles:
 * El límite de números que se pueden multiplicar es de dos números de 2000 dígitos cada uno. Si alguno de ellos tiene más dígitos, la aplicación generará un error.
 
 ## Imágenes de muestra
-A continuación, se pueden ver unas imágenes de muestra del programa.
+A continuación, se pueden ver unas imágenes de muestra del programa. Se probó en Windows 11 Pro (x64), versión 25H2.
 
 * Ejemplo de salida de una solución por la terminal del sistema operativo.
 
